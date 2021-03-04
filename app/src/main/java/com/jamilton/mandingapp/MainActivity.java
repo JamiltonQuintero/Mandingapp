@@ -15,15 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        RecyclerView recyclerView = findViewById(R.id.rvMenu);
-        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        recyclerView.setHasFixedSize(true);
 
-        Menus menus = new Menus();
-
-        final MenuAdapter adapter = new MenuAdapter(this);
-        adapter.setMenus(menus.obtenerMismEnus());
-        recyclerView.setAdapter(adapter);
 
 
     }

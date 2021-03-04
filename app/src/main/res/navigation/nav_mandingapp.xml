@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_mandingapp"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/realizarPedidoFragment"
+        android:name="com.jamilton.mandingapp.RealizarPedidoFragment"
+        android:label="fragment_realizar_pedido"
+        tools:layout="@layout/fragment_realizar_pedido" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jamilton.mandingapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_realizarPedidoFragment"
+            app:destination="@id/realizarPedidoFragment" />
+    </fragment>
+</navigation>
