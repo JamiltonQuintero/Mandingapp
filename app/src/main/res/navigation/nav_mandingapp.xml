@@ -9,7 +9,11 @@
         android:id="@+id/realizarPedidoFragment"
         android:name="com.jamilton.mandingapp.RealizarPedidoFragment"
         android:label="fragment_realizar_pedido"
-        tools:layout="@layout/fragment_realizar_pedido" />
+        tools:layout="@layout/fragment_realizar_pedido" >
+        <action
+            android:id="@+id/action_realizarPedidoFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.jamilton.mandingapp.MainFragment"

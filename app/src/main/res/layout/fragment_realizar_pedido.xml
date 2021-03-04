@@ -3,26 +3,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RealizarPedidoFragment"
-    android:background="@drawable/fondo">
+    android:orientation="vertical"
+    android:background="@color/purple_200">
 
 
-    <ImageView
-        android:id="@+id/imgPedidoPapa"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="250dp"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nombrePapasPedido"
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre papas"
-        android:gravity="center"
-        android:padding="16dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/fondocard"
+            >
+            <ImageView
+                android:id="@+id/imgPedidoPapa"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+
+            <TextView
+                android:id="@+id/nombrePapasPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre papas"
+                android:gravity="center"
+                android:padding="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/deliveryman"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="48dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="¿Cuantas llevaras?"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:inputType="number"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                   />
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elige tus Salsas"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+
+
+                <RadioButton
+                    android:id="@+id/rdbSalsaRosada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rosada"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+                <RadioButton
+                    android:id="@+id/rdbSalsaTartara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tartara"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+                <RadioButton
+                    android:id="@+id/rdbSalsaNegra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salsa negra"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/rdbSin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sin salsas"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+            <Button
+                android:id="@+id/btnPedir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pedir"
+                android:padding="16dp"
+                android:layout_margin="16dp"/>
+
+    </LinearLayout>
+    </ScrollView>
 </FrameLayout>
